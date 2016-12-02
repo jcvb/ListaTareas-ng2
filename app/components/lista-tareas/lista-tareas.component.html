@@ -1,6 +1,11 @@
 <div class="container text-center">
 	<div class="container">
 		<h4>Tareas</h4>
+		<p>
+			<span *ngFor="let queuedTareas of tasks">
+				<icon-lista-tareas [task]="queuedTareas" size="50"></icon-lista-tareas>
+			</span>
+		</p>
 		<table class="table">
 			<caption>
 				{{ queuedTareas | i18nPlural: queueHeaderMapping }} para hoy

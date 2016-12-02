@@ -1,33 +1,28 @@
-import { Component, Input, Pipe, Directive, PipeTransform, OnInit, HostListener } from '@angular/core';
+import { Component, Pipe, Directive, PipeTransform, HostListener } from '@angular/core';
 
-class Task {
-	name: string;
-	deadline: Date;
-	queued: boolean;
-	tareasRequeridas: number;
-}
+import { Task } from '../../task';
 
 const TASKS: Task[] = [
 	{
 		name: 'Completar el curso de Angular 2',
 		deadline: new Date('11/12/2016'),
-		queued: true,
-		tareasRequeridas: 2
+		queued: false,
+		tareasRequeridas: 1
 	},{
 		name: 'Completar el curso de Polymer',
 		deadline: new Date('12/22/2016'),
-		queued: true,
-		tareasRequeridas: 3
+		queued: false,
+		tareasRequeridas: 2
 	},{
 		name: 'Completar el curso de FireBase',
 		deadline: new Date('12/30/2016'),
-		queued: true,
-		tareasRequeridas: 1
+		queued: false,
+		tareasRequeridas: 3
 	},{
 		name: 'Completar el curso de TypeScript',
 		deadline: new Date('01/01/2017'),
-		queued: true,
-		tareasRequeridas: 2
+		queued: false,
+		tareasRequeridas: 4
 	}		
 ];
 
